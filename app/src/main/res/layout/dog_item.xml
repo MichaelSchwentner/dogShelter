@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dog_card"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24000001">
+
+        <ImageView
+            android:id="@+id/dog_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/dog3" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/dog_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textAppearance="@style/ScoobyTextStyle"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/dog_card"
+        app:layout_constraintTop_toBottomOf="@+id/dog_card"
+        tools:text="Chappy" />
+
+    <TextView
+        android:id="@+id/dog_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/ScoobyTextStyle"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/dog_name"
+        app:layout_constraintTop_toBottomOf="@+id/dog_name"
+        tools:text="6 Monate" />
+
+    <TextView
+        android:id="@+id/dog_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAppearance="@style/ScoobyTextStyle"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/dog_age"
+        app:layout_constraintTop_toBottomOf="@+id/dog_age"
+        tools:text="3,2 kg" />
+
+    <Button
+        android:id="@+id/dog_adopt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#CBBCA5"
+        android:text="adoptieren"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/dog_card"
+        app:layout_constraintTop_toBottomOf="@+id/dog_weight" />
+</androidx.constraintlayout.widget.ConstraintLayout>
